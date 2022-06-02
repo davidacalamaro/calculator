@@ -1,24 +1,317 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X1G-yb-aSV">
+                                <rect key="frame" x="20" y="55" width="374" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="104"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="---------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tg-LR-N1q">
+                                <rect key="frame" x="25" y="168" width="407" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="83"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jgz-T5-IvW">
+                                <rect key="frame" x="149" y="381" width="105" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <imageReference key="image" image="2.circle" catalog="system" symbolScale="default"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="89" scale="default"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Qg6-qK-jZE" appends="YES" id="5Ik-zc-6Mk"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="3.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dJg-bL-oqC">
+                                <rect key="frame" x="242" y="379" width="105" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="89"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oJB-Hz-8GW" appends="YES" id="Eht-vt-qX9"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="5.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Sv8-Bl-Lcr">
+                                <rect key="frame" x="149" y="293" width="105" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="89"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ll6-oe-Fv5" appends="YES" id="l4w-Xl-4ba"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="4.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KTr-St-YZg">
+                                <rect key="frame" x="56" y="293" width="105" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="89"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KhK-qq-Svu" appends="YES" id="iA4-uD-Goi"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="6.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dDw-b9-AYr">
+                                <rect key="frame" x="242" y="293" width="105" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="89"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WEx-gZ-2Oi" appends="YES" id="o36-6G-QEA"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBv-qP-WDj">
+                                <rect key="frame" x="56" y="381" width="105" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <imageReference key="image" image="1.circle" catalog="system" symbolScale="default"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="89"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="mbk-8M-pMc" appends="YES" id="Azf-ei-VPi"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="7.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="az3-UH-GsC">
+                                <rect key="frame" x="56" y="206" width="105" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="89"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PXd-gf-Ljw" appends="YES" id="jG0-Is-9nv"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="8.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HJg-Di-IBc">
+                                <rect key="frame" x="149" y="206" width="105" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="89"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="GcW-nX-a3F" appends="YES" id="Zuc-7z-Qto"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="9.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="buD-Tv-Squ">
+                                <rect key="frame" x="242" y="206" width="105" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="89"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WjB-Gn-2Bz" appends="YES" id="dDi-Bp-Tzj"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="equal.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cQA-E2-ZPe">
+                                <rect key="frame" x="35" y="669" width="229" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <gestureRecognizers/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="J5S-kT-C09" appends="YES" id="Wbj-eL-FIM"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="minus.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="S7P-de-laK">
+                                <rect key="frame" x="245" y="567" width="115" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <gestureRecognizers/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ldC-KT-GFA" appends="YES" id="DSe-2P-T1r"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="plus.app" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Pg-D1-leN">
+                                <rect key="frame" x="245" y="672" width="116" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <gestureRecognizers/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oR0-Yz-ox0" appends="YES" id="crE-0D-KfM"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="divide.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="c9a-iM-fp0">
+                                <rect key="frame" x="50" y="562" width="115" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <gestureRecognizers/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="omc-Xe-AqF" appends="YES" id="Lwz-Gb-fjW"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="trash.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xDm-vU-wfj">
+                                <rect key="frame" x="244" y="470" width="102" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <gestureRecognizers/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="87"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="eKJ-6A-Ekd" appends="YES" id="8K9-gf-C5f"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="multiply.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hM9-7z-f1m">
+                                <rect key="frame" x="148" y="567" width="115" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <gestureRecognizers/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PfZ-lm-300" appends="YES" id="QMw-Bq-V4J"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="0.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="umX-JR-fcL">
+                                <rect key="frame" x="143" y="468" width="111" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5xY-JS-lgD" appends="YES" id="iJw-Dg-BWB"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="output" destination="X1G-yb-aSV" id="tz1-Xa-7hl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PXd-gf-Ljw" userLabel="seven">
+                    <connections>
+                        <action selector="seven:" destination="BYZ-38-t0r" id="xno-S8-Mm8"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="GcW-nX-a3F" userLabel="eight">
+                    <connections>
+                        <action selector="eight:" destination="BYZ-38-t0r" id="2gw-1G-Jr0"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WjB-Gn-2Bz" userLabel="nine">
+                    <connections>
+                        <action selector="nine:" destination="BYZ-38-t0r" id="ciq-Dp-Ab0"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="KhK-qq-Svu" userLabel="four">
+                    <connections>
+                        <action selector="four:" destination="BYZ-38-t0r" id="5oU-hC-gNC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ll6-oe-Fv5" userLabel="five">
+                    <connections>
+                        <action selector="five:" destination="BYZ-38-t0r" id="VVa-ug-Mmd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WEx-gZ-2Oi" userLabel="six">
+                    <connections>
+                        <action selector="six:" destination="BYZ-38-t0r" id="slU-VS-OAM"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="mbk-8M-pMc" userLabel="one">
+                    <connections>
+                        <action selector="one:" destination="BYZ-38-t0r" id="heY-Sw-eF3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Qg6-qK-jZE" userLabel="two">
+                    <connections>
+                        <action selector="two:" destination="BYZ-38-t0r" id="chP-vK-7me"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="oJB-Hz-8GW" userLabel="three">
+                    <connections>
+                        <action selector="three:" destination="BYZ-38-t0r" id="ve3-po-AnB"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="5xY-JS-lgD" userLabel="zero">
+                    <connections>
+                        <action selector="zero:" destination="BYZ-38-t0r" id="I7E-jb-q2I"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="amg-44-QGJ" userLabel="decimal"/>
+                <tapGestureRecognizer id="eKJ-6A-Ekd" userLabel="clear">
+                    <connections>
+                        <action selector="clear:" destination="BYZ-38-t0r" id="N6m-ND-m8N"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="oR0-Yz-ox0" userLabel="plus">
+                    <connections>
+                        <action selector="plus:" destination="BYZ-38-t0r" id="9Qh-x7-mIy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ldC-KT-GFA" userLabel="minus">
+                    <connections>
+                        <action selector="minus:" destination="BYZ-38-t0r" id="mv1-gS-Flr"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="PfZ-lm-300" userLabel="times">
+                    <connections>
+                        <action selector="times:" destination="BYZ-38-t0r" id="hUv-4C-3V7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="J5S-kT-C09" userLabel="equals">
+                    <connections>
+                        <action selector="equals:" destination="BYZ-38-t0r" id="TVt-HT-fQY"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="omc-Xe-AqF" userLabel="divide">
+                    <connections>
+                        <action selector="divide:" destination="BYZ-38-t0r" id="8Se-Zl-gCp"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="51.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="0.circle" catalog="system" width="128" height="121"/>
+        <image name="1.circle" catalog="system" width="128" height="121"/>
+        <image name="2.circle" catalog="system" width="128" height="121"/>
+        <image name="3.circle" catalog="system" width="128" height="121"/>
+        <image name="4.circle" catalog="system" width="128" height="121"/>
+        <image name="5.circle" catalog="system" width="128" height="121"/>
+        <image name="6.circle" catalog="system" width="128" height="121"/>
+        <image name="7.circle" catalog="system" width="128" height="121"/>
+        <image name="8.circle" catalog="system" width="128" height="121"/>
+        <image name="9.circle" catalog="system" width="128" height="121"/>
+        <image name="divide.square" catalog="system" width="128" height="114"/>
+        <image name="equal.square" catalog="system" width="128" height="114"/>
+        <image name="minus.square" catalog="system" width="128" height="114"/>
+        <image name="multiply.square" catalog="system" width="128" height="114"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
+        <image name="trash.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
